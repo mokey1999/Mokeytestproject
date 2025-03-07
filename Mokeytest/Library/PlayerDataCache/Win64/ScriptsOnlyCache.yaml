@@ -1,29 +1,34 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp-Editor.dll:
+    - Invector.vCharacterController.vEditorStartupPrefs
     Assembly-CSharp.dll:
-    - AOEAbility
+    - EnemyAI
     - EnemyDamage
-    - HealAbility
     - Healthbar
-    - IgniteAbility
-    - LazerAbility
-    - LazerDamage
-    - PlayerController
+    - Invector.Utils.vComment
+    - Invector.vCharacterController.vThirdPersonController
+    - Invector.vCharacterController.vThirdPersonInput
+    - Inventory
+    - PickUP
+    - PlatformMove3D
+    - PlayerBonuses
+    - PlayerCombat
     - PlayerHealth
     - UI
     - UI_InGame
+    - vThirdPersonCamera
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
-    - Cinemachine.CinemachineFramingTransposer
-    - Cinemachine.CinemachinePipeline
-    - Cinemachine.CinemachineVirtualCamera
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -35,6 +40,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -67,6 +73,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
+    - Class: 90
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -76,54 +84,66 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11346}
+      Script: {instanceID: 11350}
     - Class: 114
-      Script: {instanceID: 11640}
+      Script: {instanceID: 11600}
     - Class: 114
-      Script: {instanceID: 11702}
+      Script: {instanceID: 11656}
     - Class: 114
-      Script: {instanceID: 11742}
+      Script: {instanceID: 11778}
     - Class: 114
-      Script: {instanceID: 11964}
+      Script: {instanceID: 11980}
     - Class: 114
-      Script: {instanceID: 11970}
+      Script: {instanceID: 12206}
     - Class: 114
-      Script: {instanceID: 12000}
+      Script: {instanceID: 12302}
     - Class: 114
-      Script: {instanceID: 12192}
+      Script: {instanceID: 12400}
     - Class: 114
-      Script: {instanceID: 12264}
+      Script: {instanceID: 12404}
     - Class: 114
-      Script: {instanceID: 12288}
+      Script: {instanceID: 12620}
     - Class: 114
-      Script: {instanceID: 12424}
+      Script: {instanceID: 12630}
     - Class: 114
-      Script: {instanceID: 12676}
+      Script: {instanceID: 13054}
     - Class: 114
-      Script: {instanceID: 13086}
+      Script: {instanceID: 13114}
     - Class: 114
-      Script: {instanceID: 13280}
+      Script: {instanceID: 13298}
     - Class: 114
-      Script: {instanceID: 13282}
+      Script: {instanceID: 13314}
     - Class: 114
-      Script: {instanceID: 13586}
+      Script: {instanceID: 13622}
     - Class: 114
-      Script: {instanceID: 13740}
+      Script: {instanceID: 14016}
     - Class: 114
-      Script: {instanceID: 14018}
+      Script: {instanceID: 14058}
     - Class: 114
-      Script: {instanceID: 14076}
+      Script: {instanceID: 14118}
     - Class: 114
-      Script: {instanceID: 14108}
+      Script: {instanceID: 14150}
+    - Class: 114
+      Script: {instanceID: 14208}
+    - Class: 114
+      Script: {instanceID: 40390}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 135
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
+    - Class: 193
+      Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 205
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -132,6 +152,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 329
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -146,6 +168,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineStateDrivenCamera
+  - hash:
+      serializedVersion: 2
+      Hash: c2e0f7ee02e95e22297f779e2348fc9a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Invector
+    className: vAnimateUV
   - hash:
       serializedVersion: 2
       Hash: c42672c997f8be6b1aa86a927ebea785
@@ -298,12 +326,6 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: c2aa13de8a68fcd7f1530d816e4d85c9
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: LazerDamage
-  - hash:
-      serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -316,10 +338,10 @@ ScriptsOnlyBuild:
     className: CinemachineExternalCamera
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 4ccb3507a96a63f0d63542f0ea89b571
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: HealAbility
+    className: vThirdPersonCamera
   - hash:
       serializedVersion: 2
       Hash: b5eb08b578a2f2d80bb106cbe65ab501
@@ -394,22 +416,10 @@ ScriptsOnlyBuild:
     className: UI
   - hash:
       serializedVersion: 2
-      Hash: 57f6248e006cc7dcee6c348f84f11eb3
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: AOEAbility
-  - hash:
-      serializedVersion: 2
       Hash: 6b5db04491c16ddb2d3c17f263ce8ce0
     assemblyName: Assembly-CSharp.dll
     namespaceName: Cinemachine.Examples
     className: CharacterMovement2D
-  - hash:
-      serializedVersion: 2
-      Hash: f530cb2930c55578d3f5bc5705c12e78
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: LazerAbility
   - hash:
       serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
@@ -508,7 +518,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 7a5abe7e97f76acbe789ed7fc463faf9
+      Hash: e73442a88f772c703fc08aae6799c2e6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UI_InGame
@@ -520,16 +530,22 @@ ScriptsOnlyBuild:
     className: CinemachinePOV
   - hash:
       serializedVersion: 2
+      Hash: dc145402791db299449a58744416dd35
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Invector.vCharacterController
+    className: vThirdPersonInput
+  - hash:
+      serializedVersion: 2
+      Hash: 54f3f18f0e5da4bab663b0097c7e99a9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerCombat
+  - hash:
+      serializedVersion: 2
       Hash: 605879ae8a51846c27ba034f03fca9f0
     assemblyName: Assembly-CSharp.dll
     namespaceName: Cinemachine.Examples
     className: ActivateCamOnPlay
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: IgniteAbility
   - hash:
       serializedVersion: 2
       Hash: dee373a0042feaebebb4cbb3113654a3
@@ -572,6 +588,18 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineComposer
+  - hash:
+      serializedVersion: 2
+      Hash: 717ba4fa266856f0da95f974dba1c541
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Invector.Utils
+    className: vComment
+  - hash:
+      serializedVersion: 2
+      Hash: 5ff9a70525627bfb461e1ceed1db0d71
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerBonuses
   - hash:
       serializedVersion: 2
       Hash: 15882a52798c275361cd0a3ada984ec5
@@ -634,6 +662,12 @@ ScriptsOnlyBuild:
     className: CinemachineTargetGroup
   - hash:
       serializedVersion: 2
+      Hash: fc96211713513ee3d1b3ccba2d817b1d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Invector.vCharacterController
+    className: vThirdPersonAnimator
+  - hash:
+      serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -644,6 +678,12 @@ ScriptsOnlyBuild:
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
     className: CinemachineTransposer
+  - hash:
+      serializedVersion: 2
+      Hash: b649cb378f4a50d61248fe4242222272
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyAI
   - hash:
       serializedVersion: 2
       Hash: a66794b62dbf044668a5f102bb7908c2
@@ -748,6 +788,12 @@ ScriptsOnlyBuild:
     className: CinemachineTouchInputMapper
   - hash:
       serializedVersion: 2
+      Hash: fc96211713513ee3d1b3ccba2d817b1d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Invector.vCharacterController
+    className: vThirdPersonController
+  - hash:
+      serializedVersion: 2
       Hash: 395aba8349ee3063910a0bf60b940c39
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -764,6 +810,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 9304ec324eeb2352dc40133327ca103f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: vPickupItem
   - hash:
       serializedVersion: 2
       Hash: a66794b62dbf044668a5f102bb7908c2
@@ -904,6 +956,12 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
+      Hash: db8e533b517476e816abaac597a1a399
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Inventory
+  - hash:
+      serializedVersion: 2
       Hash: c375149744c32ae4f94f0bb54681ea40
     assemblyName: Assembly-CSharp.dll
     namespaceName: Cinemachine.Examples
@@ -922,7 +980,7 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: 7e007bbc25f541bef7566a0fe99e806d
+      Hash: 78f0f7c53dc8aad5b63a8a2cc69fc7cd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyDamage
@@ -988,12 +1046,6 @@ ScriptsOnlyBuild:
     className: StandaloneInputModule
   - hash:
       serializedVersion: 2
-      Hash: bfbcf5a570593af80765add6d24711bf
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PlayerMovement
-  - hash:
-      serializedVersion: 2
       Hash: a95c0423ab6a9c60da5d4416a9bade24
     assemblyName: Assembly-CSharp.dll
     namespaceName: Cinemachine.Examples
@@ -1030,17 +1082,41 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
+      Hash: 22a2723c31cbf70fb6148a917d9a580f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PickUP
+  - hash:
+      serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ToggleGroup
   - hash:
       serializedVersion: 2
+      Hash: fc96211713513ee3d1b3ccba2d817b1d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Invector.vCharacterController
+    className: vThirdPersonMotor
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 659f28ba5dd9b2ed62372c595a87a972
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlatformMove3D
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HideCursor
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/user/Desktop/Mokeytest_Build/Mokeytest.exe
+  playerPath: C:/Users/user/Desktop/Mokeytest/Mokeytest.exe

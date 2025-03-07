@@ -8,6 +8,10 @@ TagManager:
   - Enemy
   - AOE_Sphere
   - Ignite_Sphere
+  - PlayerWeapon
+  - Poison
+  - PowerUP
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -19,8 +23,8 @@ TagManager:
   - 
   - enemyLayer
   - Enemy
-  - 
-  - 
+  - PlayerWeapon
+  - Ground
   - 
   - 
   - 
